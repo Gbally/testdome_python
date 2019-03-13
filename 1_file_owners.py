@@ -2,9 +2,11 @@ def group_by_owners(files):
     dic = {}
     for key, value in files.items():
         if value in dic:
-            dic[value] = [dic[value], key]
+            l = dic[value]
+            l.append(key)
+            dic[value] = l
         else:
-            dic[value] = key
+            dic[value] = [key]
     
     return dic
     
