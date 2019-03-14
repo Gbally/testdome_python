@@ -43,11 +43,18 @@ Implement a group_by_owners function that:
 
 def group_by_owners(files):
     dic = {}
+
     for key, value in files.items():
+        # If value already in the dic as a key, add a new value
         if value in dic:
+            # Save lavue of the key
             l = dic[value]
+            # Append a other value
             l.append(key)
+            # Save the list into the dic
             dic[value] = l
+
+        # Otherwise create the element in the dic
         else:
             dic[value] = [key]
     

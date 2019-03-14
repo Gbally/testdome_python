@@ -45,6 +45,9 @@ def find_two_sum(numbers, target_sum):
     :returns: (a tuple of 2 ints) The indices of the two elements whose sum is equal to target_sum
     """
     cpt = 0
+    numbers = set(numbers)
+
+    # To be changed - this is disgusting
     for n in numbers:
         cpt2 = 0
         for n2 in numbers[numbers.index(n) + 1:]:
