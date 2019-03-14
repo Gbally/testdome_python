@@ -6,7 +6,7 @@ Author:
 Anonymous
 
 Score:
-XXX% (X pass / X fail)
+100% (4 pass / 0 fail)
 
 Question:
 A playlist is considered a repeating playlist if any of the songs contain a reference 
@@ -65,7 +65,8 @@ class Song:
         """
         :returns: (bool) True if the playlist is repeating, False if not.
         """
-        song_set = []
+        # With large dataset, use of set() is required instead of a list()
+        song_set = set()
         current_song = self
 
         while current_song:
@@ -73,15 +74,11 @@ class Song:
                 return True # If the current song is in song_set (already played, return True)
             
             # Add current song to the list and change song
-            song_set.append(current_song.name)
+            song_set.add(current_song.name) # append with list(), add with set()
             current_song = current_song.next
 
         # Return False if no double song have been found
         return False
-
-        
-
-
 
             
 first = Song("Hello")

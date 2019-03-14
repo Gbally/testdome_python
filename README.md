@@ -16,7 +16,7 @@ Those tests can be found [here](https://www.testdome.com/d/python-interview-ques
 |merge\_name        |100%  |        |
 |palindrome         |100%  |        |
 |binary\_search\_tree|100% |        |
-|song               |75%   |Fail on: Performance test on a large playlist: Time limit exceeded|
+|song               |100%  |        |
 |two\_sum           |75%   |Fail on: Performance test with a large list of numbers: Time limit exceeded|
 |pipeline           |100%  |        |
 |league\_table      |      |Not Started|
