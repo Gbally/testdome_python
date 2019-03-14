@@ -65,7 +65,24 @@ class Song:
         """
         :returns: (bool) True if the playlist is repeating, False if not.
         """
-        return None
+        song_set = []
+        current_song = self
+
+        while current_song:
+            if current_song.name in song_set:
+                return True # If the current song is in song_set (already played, return True)
+            
+            # Add current song to the list and change song
+            song_set.append(current_song.name)
+            current_song = current_song.next
+
+        # Return False if no double song have been found
+        return False
+
+        
+
+
+
             
 first = Song("Hello")
 second = Song("Eye of the tiger")
