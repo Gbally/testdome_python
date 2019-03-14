@@ -28,13 +28,14 @@ should return [['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']]
 
 ######## End Original script ########
 
-def unique_names(names1, names2):
+def unique_names(*args):
     l = []
-    l = check(names1, l)
-    l = check(names2, l)
+    for arg in args:
+        l = check(arg, l)
     return l
 
 def check(name_list, l):
+    # Browse the list add append if it is not already in the list l
     for n in name_list:
         if n not in l:
             l.append(n)
