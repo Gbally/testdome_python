@@ -1,3 +1,33 @@
+"""
+Python skill test from:
+https://www.testdome.com/questions/python/merge-names/24231?visibility=1&skillId=9
+
+Author:
+Hazael Gomez
+
+Score:
+100% (4 pass / 0 fail)
+
+Question:
+Implement the IceCreamMachine's scoops method so that it returns all 
+combinations of one ingredient and one topping. If there are no ingredients 
+or toppings, the method should return an empty list.
+
+For example, IceCreamMachine(["vanilla", "chocolate"], ["chocolate sauce"]).scoops() 
+should return [['vanilla', 'chocolate sauce'], ['chocolate', 'chocolate sauce']].
+"""
+
+######## Start Original script ########
+
+# def unique_names(names1, names2):
+#     return None
+
+# names1 = ["Ava", "Emma", "Olivia"]
+# names2 = ["Olivia", "Sophia", "Emma"]
+# print(unique_names(names1, names2)) # should print Ava, Emma, Olivia, Sophia
+
+######## End Original script ########
+
 def unique_names(names1, names2):
     l = []
     l = check(names1, l)
